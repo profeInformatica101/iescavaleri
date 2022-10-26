@@ -20,6 +20,9 @@
         </div>
         
     <script>
+	//Size Screen
+	    sizeScreen();
+	    
         var canvas = document.getElementById('lienzo');
         var ctx = canvas.getContext('2d');
 
@@ -74,6 +77,16 @@
 		    y: Math.round(evt.clientY - ClientRect.top)
 		  }
 		}
+	    
+	      /* important! for alignment, you should make things
+ * relative to the canvas' current width/height.
+ */
+function sizeScreen() {
+   
+    width  = window.innerWidth;
+    height = window.innerHeight;
+  console.log("width: "+ width+", height: "+ height);
+}
     </script>
     
 </body>
